@@ -5,7 +5,7 @@ using System.Net.Security;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class PointAtMouse : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private bool _cameraIsDefined;
     public float MoveSpeed = 50f;
