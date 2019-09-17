@@ -4,22 +4,22 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -9144010009597788510
-    second: Walls and Floors_0
+    second: Wall_TL
   - first:
       213: -5553011189107368201
-    second: Walls and Floors_1
+    second: Wall_Top1
   - first:
       213: 924239709440746483
-    second: Walls and Floors_2
+    second: Wall_Top2
   - first:
       213: 7710242601947741445
-    second: Walls and Floors_3
+    second: Wall_Top3
   - first:
       213: 2976428312880898765
-    second: Walls and Floors_4
+    second: Wall_Top4
   - first:
       213: 834756173598878212
-    second: Walls and Floors_5
+    second: Wall_TR
   - first:
       213: -9178255902744905560
     second: HoleCorner_TL
@@ -28,19 +28,19 @@ TextureImporter:
     second: HoleCorner_TR
   - first:
       213: 5535528963368759564
-    second: Walls and Floors_8
+    second: Wall_Left1
   - first:
       213: 7903161733174051053
-    second: Walls and Floors_9
+    second: Hole_TL
   - first:
       213: 4907470016559930917
-    second: Walls and Floors_10
+    second: Hole_Top
   - first:
       213: 6271714927758969223
-    second: Walls and Floors_11
+    second: Hole_TR
   - first:
       213: 4939076342991906621
-    second: Walls and Floors_12
+    second: Wall_Right1
   - first:
       213: -5765221461655690255
     second: HoleCorner_BL
@@ -49,19 +49,19 @@ TextureImporter:
     second: HoleCorner_BR
   - first:
       213: -4795240494241581872
-    second: Walls and Floors_15
+    second: Wall_Left2
   - first:
       213: -8922276876024856447
-    second: Walls and Floors_16
+    second: Hole_L
   - first:
       213: 8247088281574843976
-    second: Walls and Floors_17
+    second: Hole_Mid
   - first:
       213: 2386000033012387378
-    second: Walls and Floors_18
+    second: Hole_R
   - first:
       213: 2286238252032119815
-    second: Walls and Floors_19
+    second: Wall_Right2
   - first:
       213: 2709390460235751775
     second: Inset_TL
@@ -70,22 +70,22 @@ TextureImporter:
     second: Inset_TR
   - first:
       213: 1386022234710361497
-    second: Walls and Floors_22
+    second: Wall_Left3
   - first:
       213: -2642338944226852692
-    second: Walls and Floors_23
+    second: Hole_BL
   - first:
       213: 7070845123498102132
-    second: Walls and Floors_24
+    second: Hole_Bot
   - first:
       213: -2645752745177062792
-    second: Walls and Floors_25
+    second: Hole_BR
   - first:
       213: -8329726175108946904
     second: Drain
   - first:
       213: 6512963998113506846
-    second: Walls and Floors_27
+    second: Wall_Right3
   - first:
       213: 8724882628799945071
     second: Inset_BL
@@ -94,7 +94,7 @@ TextureImporter:
     second: Inset_BR
   - first:
       213: -5875065724731192817
-    second: Walls and Floors_30
+    second: Wall_Left4
   - first:
       213: 9138237713392929318
     second: Ground_1
@@ -109,25 +109,25 @@ TextureImporter:
     second: Ground_4
   - first:
       213: -5900014799205309963
-    second: Walls and Floors_35
+    second: Wall_Right4
   - first:
       213: -3171866593268937095
-    second: Walls and Floors_36
+    second: Wall_BL
   - first:
       213: 2757795049457086100
-    second: Walls and Floors_37
+    second: Wall_Bot1
   - first:
       213: -3358462875869446511
-    second: Walls and Floors_38
+    second: Wall_Bot2
   - first:
       213: 7668773336586621766
-    second: Walls and Floors_39
+    second: Wall_Bot3
   - first:
       213: -1046518770408082098
-    second: Walls and Floors_40
+    second: Wall_Bot4
   - first:
       213: -3191188221917942334
-    second: Walls and Floors_41
+    second: Wall_BR
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -224,7 +224,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Walls and Floors_0
+      name: Wall_TL
       rect:
         serializedVersion: 2
         x: 0
@@ -245,7 +245,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_1
+      name: Wall_Top1
       rect:
         serializedVersion: 2
         x: 256
@@ -266,7 +266,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_2
+      name: Wall_Top2
       rect:
         serializedVersion: 2
         x: 512
@@ -287,7 +287,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_3
+      name: Wall_Top3
       rect:
         serializedVersion: 2
         x: 768
@@ -308,7 +308,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_4
+      name: Wall_Top4
       rect:
         serializedVersion: 2
         x: 1024
@@ -329,7 +329,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_5
+      name: Wall_TR
       rect:
         serializedVersion: 2
         x: 1280
@@ -392,7 +392,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_8
+      name: Wall_Left1
       rect:
         serializedVersion: 2
         x: 0
@@ -413,7 +413,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_9
+      name: Hole_TL
       rect:
         serializedVersion: 2
         x: 256
@@ -434,7 +434,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_10
+      name: Hole_Top
       rect:
         serializedVersion: 2
         x: 512
@@ -455,7 +455,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_11
+      name: Hole_TR
       rect:
         serializedVersion: 2
         x: 768
@@ -476,7 +476,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_12
+      name: Wall_Right1
       rect:
         serializedVersion: 2
         x: 1280
@@ -539,7 +539,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_15
+      name: Wall_Left2
       rect:
         serializedVersion: 2
         x: 0
@@ -560,7 +560,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_16
+      name: Hole_L
       rect:
         serializedVersion: 2
         x: 256
@@ -581,7 +581,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_17
+      name: Hole_Mid
       rect:
         serializedVersion: 2
         x: 512
@@ -602,7 +602,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_18
+      name: Hole_R
       rect:
         serializedVersion: 2
         x: 768
@@ -623,7 +623,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_19
+      name: Wall_Right2
       rect:
         serializedVersion: 2
         x: 1280
@@ -686,7 +686,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_22
+      name: Wall_Left3
       rect:
         serializedVersion: 2
         x: 0
@@ -707,7 +707,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_23
+      name: Hole_BL
       rect:
         serializedVersion: 2
         x: 256
@@ -728,7 +728,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_24
+      name: Hole_Bot
       rect:
         serializedVersion: 2
         x: 512
@@ -749,7 +749,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_25
+      name: Hole_BR
       rect:
         serializedVersion: 2
         x: 768
@@ -791,7 +791,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_27
+      name: Wall_Right3
       rect:
         serializedVersion: 2
         x: 1280
@@ -854,7 +854,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_30
+      name: Wall_Left4
       rect:
         serializedVersion: 2
         x: 0
@@ -959,7 +959,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_35
+      name: Wall_Right4
       rect:
         serializedVersion: 2
         x: 1280
@@ -980,7 +980,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_36
+      name: Wall_BL
       rect:
         serializedVersion: 2
         x: 0
@@ -1001,7 +1001,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_37
+      name: Wall_Bot1
       rect:
         serializedVersion: 2
         x: 256
@@ -1022,7 +1022,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_38
+      name: Wall_Bot2
       rect:
         serializedVersion: 2
         x: 512
@@ -1043,7 +1043,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_39
+      name: Wall_Bot3
       rect:
         serializedVersion: 2
         x: 768
@@ -1064,7 +1064,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_40
+      name: Wall_Bot4
       rect:
         serializedVersion: 2
         x: 1024
@@ -1085,7 +1085,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Walls and Floors_41
+      name: Wall_BR
       rect:
         serializedVersion: 2
         x: 1280
