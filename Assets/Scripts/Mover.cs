@@ -9,9 +9,6 @@ public class Mover : MonoBehaviour {
     public Vector3 MoveVector = Vector3.forward;
     private bool _stopMoving;
 
-    private List<int> inteiros = new List<int> {20, 30, 40, 62};
-    private ArrayList elementos = new ArrayList { 20, "hoje", 40, 62 }; 
-
     public Mover(float _speed)
     {
         Speed = _speed;
