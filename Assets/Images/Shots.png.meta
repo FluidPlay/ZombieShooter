@@ -104,12 +104,12 @@ TextureImporter:
       name: Shot_Rifle
       rect:
         serializedVersion: 2
-        x: 144
+        x: 145
         y: 8
-        width: 11
+        width: 10
         height: 25
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

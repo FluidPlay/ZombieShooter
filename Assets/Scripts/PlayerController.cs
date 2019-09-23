@@ -5,12 +5,17 @@ using System.Net.Security;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations;
+using UnityEngine.Experimental.PlayerLoop;
+using UnityEngine.UI;
+using Object = UnityEngine.Object;
 
 public class PlayerController : MonoBehaviour {
     public float MoveSpeed = 50f;
     public float TurnSpeed = 300f;
     private bool _cameraIsDefined;
     public float SmoothFactor = 0.25f;
+    private Text scoreGuiText;
+    public Transform weaponTransf;
 
     enum axis { Horizontal, Vertical }
     
@@ -23,6 +28,9 @@ public class PlayerController : MonoBehaviour {
     {
         if (!_cameraIsDefined)
             return;
+        
+        if (Input.GetMouseButton(0))
+            GetComponent<WeaponRifle>().Fire(weaponTransf.position, transform.rotation);
 
         //Game.Manager.Lives -= 1;
         
@@ -39,6 +47,10 @@ public class PlayerController : MonoBehaviour {
 
 //        if (Input.GetMouseButton(1)) // 0 = left, 1 = right, 2 = middle
 //            transform.position = Vector2.MoveTowards(transform.position, pointedWorldPos, MoveSpeed * dt);
+    }
+    
+    class Armor {
+        public void ApplyDamage() {}
     }
 
     private void SmoothTranslate(Transform transf, Vector2 translation, float moveSpeed, 
@@ -59,6 +71,45 @@ public class PlayerController : MonoBehaviour {
             NavMeshHit hit;
             if (NavMesh.SamplePosition(desiredPos, out hit, 0.1f, NavMesh.AllAreas))
                 doTranslation = true;
+            
+            
+            
+            
+            
+//            double longPi = 3.141592653589793238463; 
+//            float pi = (float)longPi;
+//            
+//            
+//            //* Coalescência Nula (Null Coallescence)
+//            Debug.Log ( "Texto do Placar: "+ scoreGuiText.text ?? "inválido");
+//
+//
+//            var a = 2;
+//            
+//            int x;
+//            if (a > 0)
+//                x = 1;
+//            else
+//                x = 2;
+	
+            //        <===>
+
+            //int x = a > 0 ? 1 : 2;
+        }
+        
+//        private Camera _gameCamera;
+//        public Camera GameCamera { 	get { return _gameCamera ??= Camera.main; } 
+//                                    set { _gameCamera = value; } }
+        
+        
+        void PrintComponentPosition (Object component) {
+            Debug.Log((component as MonoBehaviour).transform.position.x);
+        }
+        
+        void CheckDamage(object otherScript) {
+            if (otherScript is Armor armor) { 
+                armor.ApplyDamage(); 
+            }
         }
 
         if (doTranslation)

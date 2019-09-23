@@ -9,9 +9,9 @@ public class Mover : MonoBehaviour {
     public Vector3 MoveVector = Vector3.forward;
     private bool _stopMoving;
 
-    public Mover(float _speed)
+    public Mover(float speed)
     {
-        Speed = _speed;
+        Speed = speed;
     }
 
     public void Update()
