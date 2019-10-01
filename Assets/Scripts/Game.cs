@@ -7,6 +7,7 @@ public class Game : MonoBehaviour {
     public static Game Manager;
     public int Lives = 3;
     public PlayerController Player;
+    public Transform SceneRoot;
     
     // Start is called before the first frame update
     void Awake()

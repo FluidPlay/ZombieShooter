@@ -8,22 +8,24 @@ public class WeaponRifle : MonoBehaviour {
     public GameObject Projectile;
     // Start is called before the first frame update
     public float ReloadTime = 1f;
-    private float lastFireTime = 0f;
+    private float timeSinceLastShot = 0f;
     private bool shotQueued;
     public async void Fire(PlayerController controller)
     {
         if (shotQueued)
             return;
         //await FireAsync(pos, rot);
-        var reloadTimeLeft = (ReloadTime + lastFireTime) - Time.time; //Ex: 1 + 2 - 2.5 = 0.5
-        reloadTimeLeft = Mathf.Max(0f, reloadTimeLeft);
+        timeSinceLastShot += Time.deltaTime;
         shotQueued = true;
-        await Task.Delay(TimeSpan.FromSeconds(reloadTimeLeft));
+        await Task.Delay(TimeSpan.FromSeconds(ReloadTime - timeSinceLastShot));
         var firePos = controller.weaponTransf.position;
         var fireAngle = controller.weaponTransf.rotation
                         * Quaternion.Euler(0f, 0f, controller.zRotationOffset);
+        
         var proj = Instantiate(Projectile, firePos, fireAngle);
-        lastFireTime = Time.time;
+        proj.transform.SetParent(Game.Manager.SceneRoot);
+        
+        timeSinceLastShot = 0f;
         shotQueued = false;
     }
 

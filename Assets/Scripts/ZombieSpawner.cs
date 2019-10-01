@@ -18,6 +18,7 @@ public class ZombieSpawner : MonoBehaviour {
     {
         Vector3 spawnPos = PickSpawnPosition();
         var spawnedZombie = Instantiate(ZombiePrefab, spawnPos, Quaternion.identity);
+        spawnedZombie.transform.SetParent(Game.Manager.SceneRoot);
         SpawnedZombies.Add(spawnedZombie);
     }
 
