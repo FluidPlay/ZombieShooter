@@ -1,16 +1,34 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
+using Object = UnityEngine.Object;
+using Random = UnityEngine.Random;
 
 [System.Serializable]                    // Possibilita a serialização de classes aninhadas
 [RequireComponent(typeof(Rigidbody))]    // Se o gameObject host não tiver esse componente, adiciona 
 public class PropertiesAndExtraOperators : MonoBehaviour {
+    
+    [SerializeField]
+    private Camera _gameCamera;
+
+    public Camera GameCamera {
+        get {
+            _gameCamera = Camera.main;
+            return _gameCamera;
+        }
+        set { _gameCamera = value; }
+    }
+    
+//    public Camera GameCamera { 	get { return _gameCamera ??= Camera.main; } 
+//                                set { _gameCamera = value; } }
+    
     [SerializeField] // Serializes (saves) and show private fields
     private Collider col;
 
     [HideInInspector] // Hide public fields, they're still serialized
     public Rigidbody rb;
     
-    private Text scoreGuiText;
+    public Text scoreGuiText;
 
     void Start()
     {
@@ -33,7 +51,7 @@ public class PropertiesAndExtraOperators : MonoBehaviour {
     [TextArea] // Text goes below the field title
     public string SomeTextArea;
 
-    [Multiline(8)] string playerBiography = "";
+    [Multiline(8)] public string playerBiography = "";
 
     [Header("Health Settings")] public int health = 0;
     [Space] public int maxHealth = 100;
@@ -45,10 +63,12 @@ public class PropertiesAndExtraOperators : MonoBehaviour {
         [InspectorName("Middle Click")] Middle = 2,
     }
 
+    public MouseButton buttonSelector;
+
     [Tooltip("A float using the Range attribute")] [Range(0f, 1f)] [SerializeField]
     float AfloatNumber;
     
-    [ContextMenuItem("RandomValue", "RandomizeValueFromRightClick")]
+    [ContextMenuItem("RandomValue", nameof(RandomizeValueFromRightClick))]
     public float randomValue;
     private void RandomizeValueFromRightClick()
     {
@@ -73,14 +93,14 @@ public class PropertiesAndExtraOperators : MonoBehaviour {
     //====== Operador Ternário (Condicional)    
     int a = 2;
     
-    int x;
-    if (a > 0)
-        x = 1;
-    else
-        x = 2;
+//    int x;
+//    if (a > 0)
+//        x = 1;
+//    else
+//        x = 2;
 
     //Equivale a:
-    //    int x = a > 0 ? 1 : 2;
+    int x = a > 0 ? 1 : 2;
 
     //* Propriedade (Property)
     // Campo com Getter e Setter reativos (disparam eventos quando lidos/salvos)
@@ -104,7 +124,7 @@ public class PropertiesAndExtraOperators : MonoBehaviour {
     //======= Operador Is
     /// Verifica tipo e retorna um boolean
     void CheckDamage(object otherScript) {
-        if (otherScript is Armor armor) { 
+        if (otherScript is Armor armor) {
             armor.ApplyDamage(); 
         }
     }
