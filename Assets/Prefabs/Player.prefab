@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4566879203813772168}
   m_Layer: 0
-  m_Name: weaponTransf
+  m_Name: shotSpawnPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,8 @@ MonoBehaviour:
   MoveSpeed: 15
   TurnSpeed: 300
   SmoothFactor: 0.25
-  weaponTransf: {fileID: 4566879203813772168}
+  zRotationOffset: -90
+  ShotSpawnPoint: {fileID: 4566879203813772168}
 --- !u!114 &8565541814449270890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,3 +164,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Projectile: {fileID: 7555782962241091475, guid: 3aa6e989f13b7eb4d8ad099a4bb73c03,
     type: 3}
+  zRotationOffset: -90
+  ReloadTime: 1

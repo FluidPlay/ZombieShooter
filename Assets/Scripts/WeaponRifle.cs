@@ -1,36 +1,39 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.Experimental.PlayerLoop;
 
-public class WeaponRifle : MonoBehaviour {
-    public GameObject Projectile;
+public class WeaponRifle : MonoBehaviour
+{
     // Start is called before the first frame update
-    public float ReloadTime = 1f;
+    public GameObject Projectile;
+    public float zRotationOffset = -90f;
     private float timeSinceLastShot = 0f;
+    public float ReloadTime = 1f;
     private bool shotQueued;
+
+    private void Update()
+    {
+        timeSinceLastShot += Time.deltaTime;
+    }
+
     public async void Fire(PlayerController controller)
     {
         if (shotQueued)
             return;
-        //await FireAsync(pos, rot);
-        timeSinceLastShot += Time.deltaTime;
         shotQueued = true;
-        await Task.Delay(TimeSpan.FromSeconds(ReloadTime - timeSinceLastShot));
-        var firePos = controller.weaponTransf.position;
-        var fireAngle = controller.weaponTransf.rotation
-                        * Quaternion.Euler(0f, 0f, controller.zRotationOffset);
+        // 1 - 2 = 0.5s
+        var waitTime = TimeSpan.FromSeconds(Mathf.Max(0f, ReloadTime - timeSinceLastShot));
+        await Task.Delay(waitTime);
         
-        var proj = Instantiate(Projectile, firePos, fireAngle);
-        proj.transform.SetParent(Game.Manager.SceneRoot);
-        
+        var firePos = controller.ShotSpawnPoint.position;
+        var fireAngle = controller.transform.rotation 
+                        * Quaternion.Euler(0f, 0f, zRotationOffset);
+        Instantiate(Projectile, firePos, fireAngle);
+
         timeSinceLastShot = 0f;
         shotQueued = false;
-    }
-
-    async Task FireAsync(Vector3 pos, Quaternion rot)
-    {
-        var proj = Instantiate(Projectile, pos, rot);
     }
 }

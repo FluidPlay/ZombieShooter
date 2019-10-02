@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6703771024854142856}
   - component: {fileID: 3159094809616325051}
   - component: {fileID: -3641064705945211052}
+  - component: {fileID: 5334515923025463096}
+  - component: {fileID: 7571002529849552380}
+  - component: {fileID: 2474499095225131889}
   m_Layer: 0
   m_Name: Shot_Rifle
   m_TagString: Untagged
@@ -94,5 +97,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b61e0aeba2e74ef9a856f885561d444d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 10
+  Speed: 20
   MoveVector: {x: 0, y: 1, z: 0}
+--- !u!50 &5334515923025463096
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7555782962241091475}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &7571002529849552380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7555782962241091475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55364c61b430c8f44b2516188444f8f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &2474499095225131889
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7555782962241091475}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.05}
+  serializedVersion: 2
+  m_Radius: 0.05
