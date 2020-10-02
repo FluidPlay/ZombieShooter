@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour {
     public float TurnSpeed = 300f;
     public float SmoothFactor = 0.25f;
     [Header("Extra Settings")] public float zRotationOffset = -90f;
-    public Transform weaponTransf;
+    public Transform ShotSpawnPoint;
 
     private bool _cameraIsDefined;
     private Quaternion _rotationOffset;
